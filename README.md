@@ -18,7 +18,7 @@ example:
         }
 
         makeHello: function () {
-            var hello = document.createElement('div');
+            this.hello = document.createElement('div');
             this.el.appendChild(hello);
         }
 
@@ -27,7 +27,7 @@ example:
         }
 
         hello: function (e) {
-            e.target.innerText = 'hello';
+            this.hello.innerText = 'hello';
         }
 
     });
