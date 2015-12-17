@@ -5,32 +5,32 @@ Element relies on vanilla javascript to interact with the dom.
 
 example:
 
-var element = require('./element');
+    var element = require('./element');
 
-var hello = element({
+    var hello = element({
 
-    events: {
-        'click .hello': 'hello'
-    }
+        events: {
+            'click .hello': 'hello'
+        }
 
-    initialize: function () {
-        this.render();
-    }
+        initialize: function () {
+            this.render();
+        }
 
-    makeHello: function () {
-        var hello = document.createElement('div');
-        this.el.appendChild(hello);
-    }
+        makeHello: function () {
+            var hello = document.createElement('div');
+            this.el.appendChild(hello);
+        }
 
-    render: function () {
-        this.makeHello();
-    }
+        render: function () {
+            this.makeHello();
+        }
 
-    hello: function (e) {
-        e.target.innerText = 'hello';
-    }
+        hello: function (e) {
+            e.target.innerText = 'hello';
+        }
 
-});
+    });
 
 
-new Hello({el: document.getElementsByTagName('body')})
+    new Hello({el: document.getElementsByTagName('body')})
